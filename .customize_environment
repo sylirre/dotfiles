@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# This script should be executed only in Google Cloud Shell.
+if [ ! -d "/google" ] && [ ! -e "/.dockerenv" ]; then
+	return
+fi
+
+##############################################################################
+
+PACKAGES=()
+PACKAGES+=("direnv")
+PACKAGES+=("git-lfs")
+PACKAGES+=("pandoc")
+PACKAGES+=("ripgrep")
+PACKAGES+=("shellcheck")
+PACKAGES+=("tigervnc-standalone-server")
+
+##############################################################################
+
+export DEBIAN_FRONTEND=noninteractive
+apt -o Acquire::Queue-mode=access update
+apt -o Acquire::Queue-mode=access upgrade -yq
+apt -o Acquire::Queue-mode=access install -yq "${PACKAGES[@]}"

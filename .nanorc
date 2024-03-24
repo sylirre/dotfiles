@@ -1,0 +1,8 @@
+## Do case sensitive searches by default.
+set casesensitive
+
+## Highlight line limiting column.
+set guidestripe 80
+
+## Reduce tab length.
+set tabsize 4

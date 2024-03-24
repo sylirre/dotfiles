@@ -1,0 +1,13 @@
+[alias]
+	graph = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
+	last = log -1 --stat --show-signature
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main
+[pull]
+	ff = only
+[user]
+	name = Sylirre
+	email = 107305601+sylirre@users.noreply.github.com
+	signingkey = 85D9D4771808A3982A7F9C4BE0A05BA6940C2D1C
